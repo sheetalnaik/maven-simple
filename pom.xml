@@ -61,8 +61,8 @@
   </build>
 <distributionManagement>
     <repository>
-      <id>maven-releases</id>
-      <url>http://localhost:8081/repository/maven-releases/</url>
+      <id>115</id>
+      <url>http://localhost:8081/repository/ssn_nexus_rel/</url>
     </repository>
     </distributionManagement>
 </project>
