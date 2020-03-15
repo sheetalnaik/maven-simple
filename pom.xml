@@ -59,10 +59,4 @@
       </plugin>
     </plugins>
   </build>
-<distributionManagement>
-    <repository>
-      <id>115</id>
-      <url>http://localhost:8081/repository/ssn_nexus_rel/</url>
-    </repository>
-    </distributionManagement>
 </project>
