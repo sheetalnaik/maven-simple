@@ -4,7 +4,7 @@ pipeline {
    stages {
       stage('checkout') {
          steps {
-             git url: 'https://github.com/sheetalnaik/Newrepo.git/'
+             git url: 'https://github.com/sheetalnaik/ssn_sample_git_pjct.git'
          }
       }
    
