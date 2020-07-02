@@ -2,14 +2,14 @@ pipeline {
    agent any
 
    stages {
-      stage('Hello') {
+      stage('checkout') {
          steps {
-            sh 'git url: 'https://github.com/sheetalnaik/Newrepo.git/''
+             git url: 'https://github.com/sheetalnaik/Newrepo.git/'
          }
       }
    
    
-      stage('Hi') {
+      stage('build') {
          steps {
            sh 'clean install'
          }
