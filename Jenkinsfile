@@ -11,7 +11,7 @@ pipeline {
    
       stage('build') {
          steps {
-           sh 'clean install'
+           sh 'clean package'
          }
       }
       
