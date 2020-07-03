@@ -37,7 +37,7 @@ pipeline {
                             artifacts: [
                                 [artifactId: hello-world-war,
                                 classifier: '',
-                                file: artifactPath,
+                                file: /var/lib/jenkins/workspace/job_for_pipeline/target/hello-world-war-1.0.0.war,
                                 type: war],
                                 [artifactId: hello-world-war,
                                 classifier: '',
