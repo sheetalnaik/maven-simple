@@ -1,13 +1,5 @@
 pipeline {
    agent any
-
-       environment {
-        NEXUS_VERSION = "nexus3"
-        NEXUS_PROTOCOL = "http"
-        NEXUS_URL = "localhost:8081"
-        NEXUS_REPOSITORY = "newnexusrepo"
-        NEXUS_CREDENTIAL_ID = "nexus credentails"
-    }
     
         
         stage("Publish to Nexus Repository Manager") {
