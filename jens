@@ -1,0 +1,39 @@
+pipeline {
+   agent any
+
+       environment {
+        NEXUS_VERSION = "nexus3"
+        NEXUS_PROTOCOL = "http"
+        NEXUS_URL = "localhost:8081"
+        NEXUS_REPOSITORY = "newnexusrepo"
+        NEXUS_CREDENTIAL_ID = "nexus credentails"
+    }
+    
+        
+        stage("Publish to Nexus Repository Manager") {
+            steps {
+                script {
+                        nexusArtifactUploader(
+                            nexusVersion: NEXUS_VERSION,
+                            protocol: NEXUS_PROTOCOL,
+                            nexusUrl: NEXUS_URL,
+                            groupId: com.efsavage,
+                            version: 1,
+                            repository: NEXUS_REPOSITORY,
+                            credentialsId: NEXUS_CREDENTIAL_ID,
+                            artifacts: [
+                                [artifactId: hello-world-war,
+                                classifier: '',
+                                file: /home/ssn/hello-world-war-1.0.0.war,
+                                type: war],
+                                [artifactId: hello-world-war,
+                                classifier: '',
+                                file: "pom.xml",
+                                type: "pom"]
+                            ]
+                        );
+                    } 
+                }
+            }
+        }
+    }
