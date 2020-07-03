@@ -9,7 +9,7 @@ pipeline {
                                 classifier: '',
                                 file: '/var/lib/jenkins/workspace/job_for_pipeline/target/hello-world-war-1.0.0.war',
                                 type: 'war'
-                        ]
+                            ]
                         ],
 		nexusVersion: 'nexus3',
 		credentialsId: 'nexus credentails',
@@ -19,7 +19,7 @@ pipeline {
 		repository: 'http://localhost:8081/repository/newnexusrepo/',	
 		version: '1.0.0'		
 
-				}
+		}
             }
         }
 }
