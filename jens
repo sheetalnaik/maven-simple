@@ -1,7 +1,7 @@
 pipeline {
    agent any
     
-        
+      stages {  
         stage("Publish to Nexus Repository Manager") {
             steps {
                 script {
@@ -25,3 +25,4 @@ pipeline {
             }
         }
     }
+}
