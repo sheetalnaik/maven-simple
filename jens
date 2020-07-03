@@ -3,7 +3,7 @@ pipeline {
       stages {
         stage("Publish to Nexus Repository Manager") {
             steps {
-                        nexusArtifactUploader artifects:[
+                        nexusArtifactUploader artifacts:[
 						[
                                 artifactId: 'hello-world-war',
                                 classifier: '',
