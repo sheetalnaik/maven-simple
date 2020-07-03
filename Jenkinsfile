@@ -2,19 +2,19 @@ pipeline {
    agent any
 
    stages {
-      stage('checkout') {
+      stage('Git checkout') {
          steps {
              git url: 'https://github.com/sheetalnaik/Newrepo.git'
          }
       }
    
    
-      stage('build') {
+      stage('Maven build') {
          steps {
            sh 'mvn clean package'
          }
       }
-      stage("Publish to Nexus Repository Manager") {
+      stage("Publish to Nexus Repository") {
          steps {
                         nexusArtifactUploader artifacts: [
 	[
@@ -31,7 +31,7 @@ pipeline {
 		repository: 'newnexusrepo', 
 		version: '1.0.0'		
 
-		       }
+	     }
        } 
    }
 }
