@@ -15,7 +15,7 @@ pipeline {
 		nexusUrl: 'localhost:8081', 
 		nexusVersion: 'nexus2', 
 		protocol: 'http', 
-		repository: 'newnexusrepo', 
+		repository: 'http://localhost:8081/repository/newnexusrepo', 
 		version: '1.0.0'		
 
 		}
