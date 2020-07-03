@@ -3,20 +3,19 @@ pipeline {
       stages {
         stage("Publish to Nexus Repository Manager") {
             steps {
-                        nexusArtifactUploader artifacts:[
-						[
-                                artifactId: 'hello-world-war',
-                                classifier: '',
-                                file: '/home/ssn/hello-world-war-1.0.0.war',
-                                type: 'war'
-                            ]
-                        ],
-		nexusVersion: 'nexus3',
-		credentialsId: 'nexus credentails',
-		groupId: 'com.efsavage',
-		nexusUrl: 'localhost:8081',                  
-		protocol: 'http',					
-		repository: 'http://localhost:8081/repository/newnexusrepo/',	
+                        nexusArtifactUploader artifacts: [
+	[
+		artifactId: 'hello-world-war', 
+		classifier: '', 
+		file: 'target/hello-world-war-1.0.0.war', 
+		type: 'war'				]
+	], 
+		credentialsId: 'nexus', 
+		groupId: 'com.efsavage', 
+		nexusUrl: 'localhost:8081', 
+		nexusVersion: 'nexus2', 
+		protocol: 'http', 
+		repository: 'http://localhost:8081/repository/newnexusrepo/', 
 		version: '1.0.0'		
 
 		}
