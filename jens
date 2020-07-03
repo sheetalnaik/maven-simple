@@ -24,7 +24,7 @@ pipeline {
                             artifacts: [
                                 [artifactId: hello-world-war,
                                 classifier: '',
-                                file: /home/ssn/hello-world-war-1.0.0.war,
+                                file: /\home/\ssn/\hello-world-war-1.0.0.war,
                                 type: war],
                                 [artifactId: hello-world-war,
                                 classifier: '',
