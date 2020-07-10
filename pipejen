@@ -1,0 +1,17 @@
+pipeline {
+   agent any
+
+   stages {
+      stage('Git checkout') {
+         steps {
+             git url: 'https://github.com/sheetalnaik/Newrepo.git'
+         }
+      }
+   
+   
+      stage('Maven build') {
+         steps {
+           sh 'mvn clean package'
+         }
+      }
+ }
